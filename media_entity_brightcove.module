@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * The module file for media_entity_brightcove.
+ */
+
+use Drupal\media_entity\Entity\MediaBundle;
+use Drupal\meida_entity_brightcove\BrightcoveVideoField;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for media_bundle.
+ */
+function media_entity_brightcove_media_bundle_insert(MediaBundle $media_bundle) {
+  if ($media_bundle->type === 'media_entity_brightcove' && !$media_bundle->isSyncing()) {
+    $brightcove_video_field = new BrightcoveVideoField(\Drupal::entityTypeManager());
+    $brightcove_video_field->createField($media_bundle->id());
+  }
+}

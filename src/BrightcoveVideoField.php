@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\meida_entity_brightcove;
+namespace Drupal\media_entity_brightcove;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\media_entity_brightcove\Plugin\MediaEntity\Type\BrightcoveVideo;

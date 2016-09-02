@@ -6,7 +6,7 @@
  */
 
 use Drupal\media_entity\Entity\MediaBundle;
-use Drupal\meida_entity_brightcove\BrightcoveVideoField;
+use Drupal\media_entity_brightcove\BrightcoveVideoField;
 
 /**
  * Implements hook_ENTITY_TYPE_insert() for media_bundle.

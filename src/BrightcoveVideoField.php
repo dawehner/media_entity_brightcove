@@ -23,6 +23,8 @@ class BrightcoveVideoField {
   }
 
   public function createField($bundle) {
+    $this->ensureFieldStorage();
+
     $field_config_storage = $this->entityTypeManager->getStorage('field_config');
     if (!$field_config_storage->load('media' . '.' . $bundle . '.' . BrightcoveVideo::FIELD_NAME)) {
       $field_config = $field_config_storage->create([

@@ -139,4 +139,11 @@ class BrightcoveVideo extends MediaTypeBase {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getDefaultName(MediaInterface $media) {
+    return $this->getField($media, 'name');
+  }
+
 }
